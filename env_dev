@@ -1,0 +1,12 @@
+PORT=3333
+PROD=false
+
+POSTGRES_USER=postgres
+POSTGRES_DB=my-db
+POSTGRES_PASSWORD=123456
+
+DATABASE_URL="postgresql://postgres:123456@localhost:5434/my-db?schema=public"
+
+JWT_SEED=Cualq3rC0s4J4j1XCrush
+
+ALLOWED_CORS=['http://localhost:3000']

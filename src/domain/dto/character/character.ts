@@ -1,0 +1,81 @@
+export class CharacterDTO {
+  constructor(
+    public id: number,
+    public name: string,
+    public description: string,
+    public gender: string,
+    public country: string,
+    public style: string,
+    public ethnicity: string,
+    public age: string,
+    public eyes_color: string,
+    public hair_style: string,
+    public hair_color: string,
+    public body_type: string,
+    public breast_size: string,
+    public butt_size: string,
+    public personality: string,
+    public occupation: string,
+    public hobbies: string[],
+    public relationship: string,
+    public clothing: string,
+    public telegram_username?: string,
+    public is_fantasy?: string,
+    public assistant_id?: string
+  ) {}
+
+  static create(object: { [key: string]: any }): [string?, CharacterDTO?] {
+    const {
+      id,
+      name,
+      description,
+      gender,
+      country,
+      style,
+      ethnicity,
+      age,
+      eyes_color,
+      hair_style,
+      hair_color,
+      body_type,
+      breast_size,
+      butt_size,
+      personality,
+      occupation,
+      hobbies,
+      relationship,
+      clothing,
+      telegram_username,
+      is_fantasy,
+      assistant_id,
+    } = object;
+
+    return [
+      undefined,
+      new CharacterDTO(
+        id,
+        name,
+        description,
+        gender,
+        country,
+        style,
+        ethnicity,
+        age,
+        eyes_color,
+        hair_style,
+        hair_color,
+        body_type,
+        breast_size,
+        butt_size,
+        personality,
+        occupation,
+        hobbies,
+        relationship,
+        clothing,
+        telegram_username,
+        is_fantasy,
+        assistant_id
+      ),
+    ];
+  }
+}
